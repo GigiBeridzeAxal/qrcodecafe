@@ -9,7 +9,7 @@ const EmployeeLocation = () => {
   useEffect(() => {
     const getLocation = () => {
       if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(
+        navigator.geolocation.watchPosition(
           (position) => {
             setLatitude(position.coords.latitude);
             setLongitude(position.coords.longitude);
